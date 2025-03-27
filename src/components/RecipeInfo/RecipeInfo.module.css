@@ -1,0 +1,16 @@
+.recipe__item {
+    border-radius: 15px;
+    border: 1px solid #000;
+    width: 400px;
+    overflow: hidden;
+}
+
+.recipe__container {
+    padding: 15px;
+}
+
+.recipe__text {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
