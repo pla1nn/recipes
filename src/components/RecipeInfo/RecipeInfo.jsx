@@ -4,17 +4,18 @@ import { IoMdPeople } from "react-icons/io";
 import { PiGrains } from "react-icons/pi";
 import { LuCookingPot } from "react-icons/lu";
 import { RecipeItem, RecipeImg, RecipeContainer, RecipeTitle, RecipeText } from "./RecipeInfo.styled";
+import { Difficulty } from "../Difficulty/Difficulty";
 
-export const RecipeInfo = ({ id, image, name, time, servings, calories, difficulty }) => {
+export const RecipeInfo = ({ image, name, time, servings, calories, difficulty }) => {
     return (
-        <RecipeItem key={id}>
+        <RecipeItem>
             <RecipeImg src={image} alt={name} width="400" />
             <RecipeContainer>
                 <RecipeTitle>{name}</RecipeTitle>
                 <RecipeText><IoMdTime size={20} /> {time} mins</RecipeText>
                 <RecipeText><IoMdPeople size={20} /> {servings} servings</RecipeText>
                 <RecipeText><PiGrains size={20} /> {calories}kkal</RecipeText>
-                <RecipeText><LuCookingPot size={20} /> Difficulty: {difficulty}</RecipeText>
+                <RecipeText><LuCookingPot size={20} /> Difficulty: <Difficulty difficulty={difficulty} /></RecipeText>
             </RecipeContainer>
         </RecipeItem>
     );
